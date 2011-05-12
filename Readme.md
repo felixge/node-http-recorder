@@ -14,8 +14,9 @@ http-recorder $PORT $DIRECTORY
 `$PORT` defaults to 8080 and `$DIRECTORY` defaults to `process.cwd()`.
 
 Once started, http-recorder listens for incoming connections, and stores the
-raw incoming http in a file called `connection_<id>.http`. `id` is an integer
-starting at 1 that increments with each incoming connection (not request).
+raw incoming http data in a file called `connection_<id>.http`. `id` is an
+integer starting at 1 that increments with each incoming connection
+(not request).
 
 Alternatively, you can also use the module programatically.
 
