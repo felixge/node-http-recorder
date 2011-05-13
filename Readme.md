@@ -1,7 +1,7 @@
 # http-recorder
 
 A tool to record and play back raw http requests. Multiple requests over a
-single connection (Keep-Alive) is supported.
+single connection (Keep-Alive) are supported.
 
 ## Usage
 
