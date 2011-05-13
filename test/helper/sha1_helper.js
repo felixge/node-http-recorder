@@ -15,19 +15,17 @@ exports.sha1File = function(path, cb) {
     });
 }
 
-exports.compare = function(fixtures, results) {
-  for (var i in fixtures) {
-    var fixture = fixtures[i];
-    var result = results[i];
+exports.assertSha1 = function(result, fixture) {
+  exports.sha1File(fixture, function(err, fixtureSha1) {
+    exports.sha1File(result, function(err, resultSha1) {
+      if (fixtureSha1 === resultSha1) {
+        return;
+      }
 
-    exports.sha1File(fixture, function(err, fixtureSha1) {
-      exports.sha1File(result, function(err, resultSha1) {
-        if (fixtureSha1 !== resultSha1) {
-          return;
-        }
-
-        throw new Error('Sha1 mismatch: ' + fixtureSha1 + ' !== ' + resultSha1);
-      });
+      var message =
+        'Sha1 mismatch: ' + resultSha1 + ' !== ' + fixtureSha1 + ' when ' +
+        'comparing ' + result + ' with ' + fixture;
+      throw new Error(message);
     });
-  }
+  });
 };
