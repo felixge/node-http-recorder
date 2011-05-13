@@ -60,3 +60,8 @@ that you can easily feed into your parser.
 You may be able to do other things with it as well, but the module is not meant
 for recording and replaying user interactions (as that would likely require
 modifying the `Host` header for different environments).
+
+## License
+
+http-recorder is licensed under the MIT license.
+
