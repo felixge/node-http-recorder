@@ -2,7 +2,7 @@
   "author": "Felix Geisendörfer <felix@debuggable.com> (http://debuggable.com/)",
   "name": "http-recorder",
   "description": "A tool to record and play back raw http requests.",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/felixge/node-http-recorder",
   "repository": {
     "type": "git",
@@ -10,8 +10,9 @@
   },
   "main": "./lib/http_recorder",
   "engines": {
-    "node": "~v0.4.8-pre"
+    "node": ">=v0.4.0"
   },
+  "bin": "bin/http-recorder.js",
   "dependencies": {},
   "devDependencies": {}
 }
