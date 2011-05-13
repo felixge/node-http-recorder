@@ -3,6 +3,20 @@
 A tool to record and play back raw http requests. Multiple requests over a
 single connection (Keep-Alive) are supported.
 
+## Install
+
+To install the command line utility, run:
+
+``` bash
+npm install -g http-recorder
+```
+
+If you want to install the module locally instead, use:
+
+``` bash
+npm install http-recorder
+```
+
 ## Usage
 
 This module ships with a simple http-recorder command line tool that takes
