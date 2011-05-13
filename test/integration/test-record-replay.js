@@ -28,10 +28,10 @@ recorder.listen(common.port, function() {
 });
 
 var i = 0;
-recorder.on('record', function(path) {
+recorder.on('record', function(record) {
   var fixture = fixtures[i];
 
-  sha1Helper.assertSha1(path, fixture);
+  sha1Helper.assertSha1(record.getPath(), fixture);
 
   i++;
 });
