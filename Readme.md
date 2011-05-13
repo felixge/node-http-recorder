@@ -50,3 +50,13 @@ Please note: The player is a very dumb http client. When calling
 `player.end()`, it opens a single socket to the given port / host, and simply
 pipes all files passed to `player.add()` sequentially into it. You are
 responsible for figuring out if the host supports Keep-Alive or not.
+
+## What do with this?
+
+This module is useful if you are tasked to write a http payload parser (like
+[formidable][]), and you want to start out by gathering a good set of test data
+that you can easily feed into your parser.
+
+You may be able to do other things with it as well, but the module is not meant
+for recording and replaying user interactions (as that would likely require
+modifying the `Host` header for different environments).
