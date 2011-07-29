@@ -13,6 +13,8 @@
     "node": ">=v0.4.0"
   },
   "bin": "bin/http-recorder.js",
-  "dependencies": {},
+  "dependencies": {
+    "oop": "0.0.3"
+  },
   "devDependencies": {}
 }
