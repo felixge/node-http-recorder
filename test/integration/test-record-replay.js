@@ -29,10 +29,11 @@ recorder.listen(common.port, function() {
 
 var i = 0;
 recorder.on('record', function(record) {
-  var fixture = fixtures[i];
+  var recordPath = record.getPath();
+  var m = recordPath.match(/_([0-9])\.http$/);
+  var fixture = fixtures[m[1] - 1];
 
   sha1Helper.assertSha1(record.getPath(), fixture);
-
   i++;
 });
 
