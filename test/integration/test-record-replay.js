@@ -18,7 +18,7 @@ recorder.listen(common.port, function() {
 
   player.add.apply(player, fixtures);
 
-  player.end(function(err) {
+  player.play(function(err) {
     if (err) {
       throw err;
     }
